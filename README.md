@@ -10,6 +10,8 @@ Which features you included
 
 ## References
 
+- [muzzle flash] https://opengameart.org/content/muzzle-flash-with-model
+
 ## Future Development
 none
 ## Created by
