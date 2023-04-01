@@ -10,6 +10,8 @@ Which features you included
 
 ## References
 
+- https://www.fontspace.com/keyugahtrial-font-f94443
+
 - [muzzle flash] https://opengameart.org/content/muzzle-flash-with-model
 
 - [weapons] https://kenney.nl/assets/blaster-kit
