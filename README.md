@@ -10,7 +10,7 @@ Which features you included
 
 ## References
 
-- https://www.fontspace.com/keyugahtrial-font-f94443
+- https://www.fontspace.com/g-grest-font-f94789
 
 - [muzzle flash] https://opengameart.org/content/muzzle-flash-with-model
 
