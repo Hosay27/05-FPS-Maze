@@ -18,7 +18,7 @@ Which features you included
 
 - [weapon shooting sounds] https://opengameart.org/content/chaingun-pistol-rifle-shotgun-shots, https://opengameart.org/content/shotgun-shoot-reload
 
-- [music] https://opengameart.org/content/dungeon-04, https://opengameart.org/content/dubious-dungeon
+- [music](https://opengameart.org/content/dungeon-04, https://opengameart.org/content/dubious-dungeon)
 
 ## Future Development
 none
