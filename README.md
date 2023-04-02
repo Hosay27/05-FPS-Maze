@@ -16,7 +16,7 @@ Which features you included
 
 - [weapons](https://kenney.nl/assets/blaster-kit)
 
-- [weapon shooting sounds](https://opengameart.org/content/chaingun-pistol-rifle-shotgun-shots, https://opengameart.org/content/shotgun-shoot-reload)
+- [weapon shooting sounds](https://opengameart.org/content/chaingun-pistol-rifle-shotgun-shots)
 
 - [music](https://opengameart.org/content/dungeon-04)
 
