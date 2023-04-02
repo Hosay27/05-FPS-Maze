@@ -12,13 +12,13 @@ Which features you included
 
 - [font](https://www.fontspace.com/g-grest-font-f94789)
 
-- [muzzle flash] https://opengameart.org/content/muzzle-flash-with-model
+- [muzzle flash](https://opengameart.org/content/muzzle-flash-with-model)
 
-- [weapons] https://kenney.nl/assets/blaster-kit
+- [weapons](https://kenney.nl/assets/blaster-kit)
 
-- [weapon shooting sounds] https://opengameart.org/content/chaingun-pistol-rifle-shotgun-shots, https://opengameart.org/content/shotgun-shoot-reload
+- [weapon shooting sounds](https://opengameart.org/content/chaingun-pistol-rifle-shotgun-shots, https://opengameart.org/content/shotgun-shoot-reload)
 
-- [music](https://opengameart.org/content/dungeon-04, https://opengameart.org/content/dubious-dungeon)
+- [music](https://opengameart.org/content/dungeon-04)
 
 ## Future Development
 none
