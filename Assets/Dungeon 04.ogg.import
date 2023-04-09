@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Dungeon 04.ogg-18a5314ef6b132991c0983f811ca7333.oggstr"
+
+[deps]
+
+source_file="res://Assets/Dungeon 04.ogg"
+dest_files=[ "res://.import/Dungeon 04.ogg-18a5314ef6b132991c0983f811ca7333.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

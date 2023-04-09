@@ -1,0 +1,73 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Enemy/Enemies.gd" type="Script" id=1]
+[ext_resource path="res://Assets/pistol.wav" type="AudioStream" id=2]
+[ext_resource path="res://Assets/Dungeon 04.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Assets/marker.png" type="Texture" id=4]
+[ext_resource path="res://Assets/key_pickup.mp3" type="AudioStream" id=5]
+[ext_resource path="res://Maze/Maze.gd" type="Script" id=6]
+[ext_resource path="res://MiniMap/MiniMap.gd" type="Script" id=7]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=8]
+[ext_resource path="res://UI/Menu.tscn" type="PackedScene" id=9]
+[ext_resource path="res://UI/HUD.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Assets/door-01.mp3" type="AudioStream" id=11]
+
+[node name="Game" type="Spatial"]
+
+[node name="Maze" type="Spatial" parent="."]
+script = ExtResource( 6 )
+
+[node name="Enemies" type="Spatial" parent="Maze"]
+script = ExtResource( 1 )
+
+[node name="Player" parent="." instance=ExtResource( 8 )]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.714728, 1, 1 )
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="VP" type="Control" parent="UI"]
+margin_left = 824.0
+margin_top = 400.0
+margin_right = 1024.0
+margin_bottom = 600.0
+rect_clip_content = true
+
+[node name="BG" type="ColorRect" parent="UI/VP"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.313726 )
+
+[node name="Map_Container" type="Node2D" parent="UI/VP"]
+
+[node name="MiniMap" type="Node2D" parent="UI/VP/Map_Container"]
+scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 7 )
+
+[node name="Marker" type="Sprite" parent="UI/VP"]
+position = Vector2( 100, 100 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 4 )
+
+[node name="HUD" parent="UI" instance=ExtResource( 10 )]
+
+[node name="Menu" parent="UI" instance=ExtResource( 9 )]
+visible = false
+
+[node name="Music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -12.0
+autoplay = true
+
+[node name="Key_Collect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -4.0
+pitch_scale = 1.1
+
+[node name="Pistol" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = -16.0
+
+[node name="Door" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+volume_db = -4.0
+pitch_scale = 1.1

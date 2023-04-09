@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/key_pickup.mp3-1e67cc20572f7ca6fcd67814a50d5a8a.mp3str"
+
+[deps]
+
+source_file="res://Assets/key_pickup.mp3"
+dest_files=[ "res://.import/key_pickup.mp3-1e67cc20572f7ca6fcd67814a50d5a8a.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

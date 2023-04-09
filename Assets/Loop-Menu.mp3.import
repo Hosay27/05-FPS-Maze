@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Loop-Menu.mp3-cd1dc3dbb828c2f351890b9a183f9a1c.mp3str"
+
+[deps]
+
+source_file="res://Assets/Loop-Menu.mp3"
+dest_files=[ "res://.import/Loop-Menu.mp3-cd1dc3dbb828c2f351890b9a183f9a1c.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

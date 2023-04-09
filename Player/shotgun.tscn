@@ -1,0 +1,90 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Assets/shotgun.glb" type="PackedScene" id=1]
+[ext_resource path="res://Player/muzzle.tres" type="Material" id=2]
+[ext_resource path="res://Assets/muzzleflash.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://Player/Flash.gd" type="Script" id=4]
+[ext_resource path="res://Player/shotgun.gd" type="Script" id=5]
+
+[sub_resource type="Animation" id=3]
+resource_name = "shoot"
+length = 0.375
+tracks/0/type = "transform"
+tracks/0/path = NodePath("Armature/Skeleton:Mag")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = PoolRealArray( 0, 1, 0, 0, -3.72529e-09, 9.31323e-10, 3.46945e-18, 3.72529e-09, 1, 1, 1, 1, 0.0666667, 1, 0, 0, -3.72529e-09, -3.46945e-18, 1.49012e-08, 3.49246e-09, 1, 1, 1, 1, 0.133333, 1, -1.56984e-05, -0.0056839, -0.000191938, -2.32831e-09, 4.33681e-18, -1.86265e-09, 1, 1, 1, 1, 0.266667, 1, -0.000455447, -0.164836, -0.00556598, 4.65661e-10, 2.98023e-08, 7.21775e-09, 1, 1, 1, 1, 0.333333, 1, -0.000207596, -0.0751276, -0.0025368, 4.65661e-10, 2.60208e-18, 5.58794e-09, 1, 1, 1, 1, 0.375, 1, 8.73879e-05, 0.0316328, 0.00106815, 4.65661e-10, 2.60208e-18, 5.58794e-09, 1, 1, 1, 1 )
+tracks/1/type = "transform"
+tracks/1/path = NodePath("Armature/Skeleton:Main")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = PoolRealArray( 0, 1, 0, 0, 0, 0, 0, -2.04399e-14, 1, 1, 1, 1, 0.0666667, 1, 0, 0, 0, -0.00707978, 0.000171347, 0.0161566, 0.999844, 1, 1, 1, 0.133333, 1, 0, 0, 0, -0.0235808, 0.00118963, 0.0481512, 0.998561, 1, 1, 1, 0.2, 1, 0, 0, 0, -0.0235043, 0.00226049, 0.00270448, 0.999718, 1, 1, 1, 0.266667, 1, 0, 0, 0, -0.0234913, 0.00234998, -0.00297861, 0.999717, 1, 1, 1, 0.375, 1, 0, 0, 0, -0.0234913, 0.00234998, -0.00297861, 0.999717, 1, 1, 1 )
+
+[node name="shotgun" instance=ExtResource( 1 )]
+transform = Transform( -1, 9.15489e-12, 8.74228e-08, 0, 1, -0.00010472, -8.74228e-08, -0.00010472, -1, 0.100591, -0.273906, -0.237325 )
+script = ExtResource( 5 )
+
+[node name="Armature" parent="." index="0"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.0679027, 0.249703, -4.75347e-06 )
+
+[node name="AnimationPlayer" parent="." index="1"]
+anims/shoot = SubResource( 3 )
+
+[node name="Flash" type="Spatial" parent="." index="2"]
+transform = Transform( -0.995221, 0, -8.7005e-08, 0, 0.995221, 0, 8.7005e-08, 0, -0.995221, 0.077842, -0.279615, -0.926201 )
+visible = false
+script = ExtResource( 4 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Flash" index="0"]
+transform = Transform( 0.4, -1.20658e-18, 1.90582e-21, -5.93691e-18, 0.4, -2.91038e-11, -1.69407e-21, 2.91038e-11, 0.4, 0.152432, 0.0985077, -2.42076 )
+mesh = ExtResource( 3 )
+material/0 = ExtResource( 2 )
+material/1 = ExtResource( 2 )
+material/2 = ExtResource( 2 )
+
+[node name="OmniLight" type="OmniLight" parent="Flash" index="1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0.6 )
+light_color = Color( 1, 0.992157, 0.584314, 1 )
+light_energy = 80.0
+omni_range = 3.0
+omni_attenuation = 9.18956
+
+[node name="Timer" type="Timer" parent="Flash" index="2"]
+wait_time = 0.15
+one_shot = true
+
+[node name="Raycasts" type="Spatial" parent="." index="3"]
+
+[node name="RayCast" type="RayCast" parent="Raycasts" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0707888, -0.171135, 0.595496 )
+cast_to = Vector3( 0, 0, 30 )
+
+[node name="RayCast2" type="RayCast" parent="Raycasts" index="1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0707888, -0.171135, 0.595496 )
+cast_to = Vector3( 0, 0, 30 )
+
+[node name="RayCast3" type="RayCast" parent="Raycasts" index="2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0707888, -0.171135, 0.595496 )
+cast_to = Vector3( 0, 0, 30 )
+
+[node name="RayCast4" type="RayCast" parent="Raycasts" index="3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0707888, -0.217592, 0.595501 )
+cast_to = Vector3( 0, 0, 30 )
+
+[node name="RayCast5" type="RayCast" parent="Raycasts" index="4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0707888, -0.217592, 0.595501 )
+cast_to = Vector3( 0, 0, 30 )
+
+[node name="RayCast6" type="RayCast" parent="Raycasts" index="5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0707888, -0.217592, 0.595501 )
+cast_to = Vector3( 0, 0, 30 )
+
+[node name="Timer" type="Timer" parent="." index="4"]
+one_shot = true
+
+[connection signal="timeout" from="Flash/Timer" to="Flash" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
